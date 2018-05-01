@@ -1,0 +1,4 @@
+
+Clover EFI installer log - Tue Dec 20 07:08:52 CST 2016
+Installer version: v2.3k r3960 EFI bootloader
+
