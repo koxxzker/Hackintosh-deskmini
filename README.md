@@ -1,7 +1,6 @@
 # Hackintosh-deskmini
-Hackintosh install guide for deskmini
 
-Hardware:
+Hardware：
 
 Deskmini 110(case+motherboard)
 
