@@ -1,0 +1,4 @@
+
+Clover EFI installer log - Tue Dec 20 07:08:52 CST 2019
+Installer version: v2.5k r5097 EFI bootloader
+

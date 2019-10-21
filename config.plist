@@ -199,7 +199,7 @@
 	<key>Boot</key>
 	<dict>
 		<key>Arguments</key>
-		<string>dart=0 -shikigva</string>
+		<string>dart=0 -shikigva -disablegfxfirmware</string>
 		<key>Debug</key>
 		<false/>
 		<key>DefaultLoader</key>
@@ -240,7 +240,7 @@
 		<key>Audio</key>
 		<dict>
 			<key>Inject</key>
-			<string>11</string>
+			<integer>11</integer>
 			<key>ResetHDA</key>
 			<true/>
 		</dict>
@@ -298,7 +298,7 @@
 		<key>NvidiaSingle</key>
 		<false/>
 		<key>ig-platform-id</key>
-		<string>0x19120000</string>
+		<string>0x19160000</string>
 	</dict>
 	<key>KernelAndKextPatches</key>
 	<dict>
@@ -314,23 +314,25 @@
 		<string>0x0506E3</string>
 		<key>KernelCpu</key>
 		<false/>
-		<key>KernelHaswellE</key>
-		<false/>
 		<key>KernelLapic</key>
 		<false/>
 		<key>KernelPm</key>
 		<true/>
+		<key>KernelXCPM</key>
+		<false/>
 		<key>KextsToPatch</key>
 		<array>
 			<dict>
 				<key>Comment</key>
 				<string>AirPortBrcm4360 - PCI Error 1</string>
 				<key>Disabled</key>
-				<false/>
+				<true/>
 				<key>Find</key>
 				<data>
 				QTnEdRs=
 				</data>
+				<key>InfoPlistPatch</key>
+				<false/>
 				<key>Name</key>
 				<string>AirPortBrcm4360</string>
 				<key>Replace</key>
@@ -342,11 +344,13 @@
 				<key>Comment</key>
 				<string>Unlock 31 Ports at Intel 100 Series Chipset at macOS Sierra</string>
 				<key>Disabled</key>
-				<false/>
+				<true/>
 				<key>Find</key>
 				<data>
 				g710////EA==
 				</data>
+				<key>InfoPlistPatch</key>
+				<false/>
 				<key>MatchOS</key>
 				<string>10.12.x</string>
 				<key>Name</key>
@@ -360,11 +364,13 @@
 				<key>Comment</key>
 				<string>AirPortBrcm4360 - PCI Error 2</string>
 				<key>Disabled</key>
-				<false/>
+				<true/>
 				<key>Find</key>
 				<data>
 				QQ+3zTnBdQw=
 				</data>
+				<key>InfoPlistPatch</key>
+				<false/>
 				<key>Name</key>
 				<string>AirPortBrcm4360</string>
 				<key>Replace</key>
@@ -376,64 +382,18 @@
 				<key>Comment</key>
 				<string>AirPortBrcm4360 - PCI Error 3</string>
 				<key>Disabled</key>
-				<false/>
+				<true/>
 				<key>Find</key>
 				<data>
 				g33EBHQG
 				</data>
+				<key>InfoPlistPatch</key>
+				<false/>
 				<key>Name</key>
 				<string>AirPortBrcm4360</string>
 				<key>Replace</key>
 				<data>
 				g33EBGaQ
-				</data>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>BCM94352-5GHz-US-FCC-darkvoid</string>
-				<key>Disabled</key>
-				<false/>
-				<key>Find</key>
-				<data>
-				gflSqgAAdSk=
-				</data>
-				<key>Name</key>
-				<string>AirPortBrcm4360</string>
-				<key>Replace</key>
-				<data>
-				gflSqgAAZpA=
-				</data>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>BCM94352-5GHz-US-FCC-darkvoid</string>
-				<key>Disabled</key>
-				<false/>
-				<key>Find</key>
-				<data>
-				QYP8/3QsSA==
-				</data>
-				<key>Name</key>
-				<string>AirPortBrcm4360</string>
-				<key>Replace</key>
-				<data>
-				ZscGVVPrKw==
-				</data>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>BCM94352-Airport-Extreme-skvo</string>
-				<key>Disabled</key>
-				<false/>
-				<key>Find</key>
-				<data>
-				axAAAHUN
-				</data>
-				<key>Name</key>
-				<string>AirPortBrcm4360</string>
-				<key>Replace</key>
-				<data>
-				axAAAJCQ
 				</data>
 			</dict>
 			<dict>
@@ -445,6 +405,8 @@
 				<data>
 				Ym9hcmQtaWQ=
 				</data>
+				<key>InfoPlistPatch</key>
+				<false/>
 				<key>Name</key>
 				<string>AppleGraphicsDevicePolicy</string>
 				<key>Replace</key>
@@ -456,11 +418,13 @@
 				<key>Comment</key>
 				<string>change 15 port limit to 26</string>
 				<key>Disabled</key>
-				<false/>
+				<true/>
 				<key>Find</key>
 				<data>
 				g710////EA==
 				</data>
+				<key>InfoPlistPatch</key>
+				<false/>
 				<key>MatchOS</key>
 				<string>10.12.x</string>
 				<key>Name</key>
@@ -474,11 +438,13 @@
 				<key>Comment</key>
 				<string>change 15 port limit to 26</string>
 				<key>Disabled</key>
-				<false/>
+				<true/>
 				<key>Find</key>
 				<data>
 				g72M/v//EA==
 				</data>
+				<key>InfoPlistPatch</key>
+				<false/>
 				<key>MatchOS</key>
 				<string>10.11.x</string>
 				<key>Name</key>
@@ -492,16 +458,78 @@
 				<key>Comment</key>
 				<string>10.11+-BT4LE-Handoff-Hotspot-lisai9093</string>
 				<key>Disabled</key>
-				<false/>
+				<true/>
 				<key>Find</key>
 				<data>
 				SIX/dEdIiwc=
 				</data>
+				<key>InfoPlistPatch</key>
+				<false/>
 				<key>Name</key>
 				<string>IOBluetoothFamily</string>
 				<key>Replace</key>
 				<data>
 				Qb4PAAAA60Q=
+				</data>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>Disable minStolenSize less or equal fStolenMemorySize assertion, 10.14 Credits (Sniki)</string>
+				<key>Disabled</key>
+				<false/>
+				<key>Find</key>
+				<data>
+				dkZI/wU=
+				</data>
+				<key>InfoPlistPatch</key>
+				<false/>
+				<key>MatchOS</key>
+				<string>10.15</string>
+				<key>Name</key>
+				<string>com.apple.driver.AppleIntelKBLGraphicsFramebuffer</string>
+				<key>Replace</key>
+				<data>
+				60ZI/wU=
+				</data>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>USB port limit patch #1 10.15.x modify by DalianSky(credit ydeng)</string>
+				<key>Disabled</key>
+				<false/>
+				<key>Find</key>
+				<data>
+				g/sPDw==
+				</data>
+				<key>InfoPlistPatch</key>
+				<false/>
+				<key>MatchOS</key>
+				<string>10.15</string>
+				<key>Name</key>
+				<string>com.apple.iokit.IOUSBHostFamily</string>
+				<key>Replace</key>
+				<data>
+				g/s/Dw==
+				</data>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>USB Port limit patch #2 10.15.x modify by DalianSky</string>
+				<key>Disabled</key>
+				<false/>
+				<key>Find</key>
+				<data>
+				g/kPDw==
+				</data>
+				<key>InfoPlistPatch</key>
+				<false/>
+				<key>MatchOS</key>
+				<string>10.15</string>
+				<key>Name</key>
+				<string>com.apple.driver.usb.AppleUSBXHCI</string>
+				<key>Replace</key>
+				<data>
+				g/k/Dw==
 				</data>
 			</dict>
 		</array>
